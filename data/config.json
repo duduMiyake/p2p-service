@@ -1,0 +1,22 @@
+{
+    "num_nodes": 6,
+    "min_neighbors": 1,
+    "max_neighbors": 3,
+    "nodes": {
+      "n1": { "resources": ["r1", "r2"] },
+      "n2": { "resources": ["r3"] },
+      "n3": { "resources": ["r4", "r5"] },
+      "n4": { "resources": ["r6"] },
+      "n5": { "resources": ["r7", "r8"] },
+      "n6": { "resources": ["r9"] }
+    },
+    "edges": [
+      ["n1", "n2"],
+      ["n1", "n3"],
+      ["n2", "n4"],
+      ["n3", "n5"],
+      ["n5", "n6"],
+      ["n4", "n6"]
+    ]
+  }
+  

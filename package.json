@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "codigo": "file:",
     "lodash": "^4.17.21",
     "readline-sync": "^1.4.10"
   }

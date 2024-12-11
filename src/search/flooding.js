@@ -8,7 +8,6 @@ function floodingSearch(graph, startNode, resource, ttl) {
         if (visited.has(node)) continue;
         visited.add(node);
         messages++;
-
         if (graph[node].resources.includes(resource)) {
             return { found: true, messages };
         }
@@ -19,7 +18,7 @@ function floodingSearch(graph, startNode, resource, ttl) {
             }
         }
     }
-
+    
     return { found: false, messages };
 }
 

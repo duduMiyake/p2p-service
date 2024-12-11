@@ -1,18 +1,18 @@
-function randomWalk(graph, startNode, resource, ttl) {
+function passeioAleatorio(graph, startNode, resource, ttl) {
     let currentNode = startNode;
     let messages = 0;
 
     for (let i = 0; i < ttl; i++) {
         messages++;
-
-        // Verifica se o recurso está no nó atual
+        // console.log("no atual: " + currentNode)
+        // Recurso está no nó atual?
         if (graph[currentNode].resources.includes(resource)) {
             return { found: true, messages };
         }
 
         const neighbors = graph[currentNode].neighbors;
+        // console.log("vizinhos: " +neighbors)
 
-        // Se o nó não tiver vizinhos, encerra a busca
         if (neighbors.length === 0) {
             break;
         }
@@ -24,4 +24,4 @@ function randomWalk(graph, startNode, resource, ttl) {
     return { found: false, messages };
 }
 
-export { randomWalk };
+export { passeioAleatorio };

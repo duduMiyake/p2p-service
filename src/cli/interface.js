@@ -6,8 +6,8 @@ import { buildGraph } from '../network/graph.js';
 
 function startCLI() {
     const config = loadConfig('data/config.json');
-    const graph = buildGraph(config.edges, config.nodes);
-    const node = readlineSync.question('Nó inicial: ');
+    const graph = buildGraph(config.edges, config.resources);
+    const node = readlineSync.question('No inicial: ');
     const resource = readlineSync.question('Recurso: ');
     const ttl = parseInt(readlineSync.question('TTL: '), 10);
     const algo = readlineSync.question('Algoritmo (flooding/random): ');
@@ -20,7 +20,6 @@ function startCLI() {
     }
 
     console.log('Resultado:', result);
-    
 }
 
 export { startCLI };

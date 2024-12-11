@@ -1,8 +1,8 @@
 import { buildGraph } from "./graph.js";
 
-function isConnected(edges, numNodes, nodesConfig) {
+function isConnected(edges, numNodes, resourcesConfig) {
     const visited = new Set();
-    const graph = buildGraph(edges, nodesConfig);
+    const graph = buildGraph(edges, resourcesConfig);
 
     function dfs(node) {
         if (visited.has(node)) return;
